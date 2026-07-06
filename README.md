@@ -1,5 +1,7 @@
 # Kotaru 📖
 
+[![Android CI Build](https://github.com/Alax-Dev/Kotaru/actions/workflows/android-ci.yml/badge.svg)](https://github.com/Alax-Dev/Kotaru/actions/workflows/android-ci.yml)
+
 A modern manga reader app for Android with iOS-style design, auto captcha solver, and 19 curated sources.
 
 ## ✨ Features
