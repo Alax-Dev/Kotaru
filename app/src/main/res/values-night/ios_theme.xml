@@ -2,7 +2,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
 	<!-- iOS Dark Mode Theme -->
-	<style name="Theme.Kotatsu.iOS" parent="Theme.Kotatsu">
+	<style name="Theme.Kotatsu.iOS" parent="Base.Theme.Kotatsu">
 		<!-- iOS Dark primary colors -->
 		<item name="colorPrimary">@color/ios_accentDark</item>
 		<item name="colorPrimaryContainer">@color/ios_accentDark</item>

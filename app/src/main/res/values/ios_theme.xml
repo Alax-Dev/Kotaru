@@ -2,7 +2,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
 	<!-- iOS-style Theme for Kotatsu -->
-	<style name="Theme.Kotatsu.iOS" parent="Theme.Kotatsu">
+	<style name="Theme.Kotatsu.iOS" parent="Base.Theme.Kotatsu">
 		<!-- iOS-style primary colors -->
 		<item name="colorPrimary">@color/ios_systemBlue</item>
 		<item name="colorPrimaryContainer">@color/ios_systemBlue</item>
