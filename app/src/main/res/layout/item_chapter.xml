@@ -4,20 +4,19 @@
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
-	android:layout_height="wrap_content"
-	android:background="?selectableItemBackground"
+	android:layout_height="?attr/listPreferredItemHeight"
+	android:background="@drawable/list_selector"
 	android:baselineAligned="false"
 	android:gravity="center_vertical"
-	android:minHeight="52dp"
-	android:orientation="horizontal"
-	android:paddingStart="16dp"
-	android:paddingEnd="16dp"
-	android:paddingTop="10dp"
-	android:paddingBottom="10dp">
+	android:minHeight="@dimen/chapter_list_item_height"
+	android:orientation="horizontal">
 
 	<LinearLayout
 		android:layout_width="0dp"
 		android:layout_height="wrap_content"
+		android:layout_marginVertical="8dp"
+		android:layout_marginStart="?android:listPreferredItemPaddingStart"
+		android:layout_marginEnd="?android:listPreferredItemPaddingEnd"
 		android:layout_weight="1"
 		android:orientation="vertical">
 
@@ -28,10 +27,9 @@
 			android:drawablePadding="8dp"
 			android:ellipsize="end"
 			android:singleLine="true"
-			android:textColor="@color/ios_label"
-			android:textSize="17sp"
-			android:fontFamily="sans-serif"
-			tools:text="Chapter 51" />
+			android:textAppearance="?attr/textAppearanceBodyLarge"
+			tools:text="@tools:sample/lorem[15]"
+			tools:textColor="?android:textColorPrimary" />
 
 		<TextView
 			android:id="@+id/textView_description"
@@ -40,44 +38,25 @@
 			android:layout_marginTop="2dp"
 			android:ellipsize="end"
 			android:singleLine="true"
-			android:textColor="@color/ios_secondaryLabel"
-			android:textSize="15sp"
-			android:fontFamily="sans-serif"
-			tools:text="Jun 22, 2026 · Scanlator" />
+			android:textAppearance="?attr/textAppearanceBodySmall"
+			tools:text="05.10.2021 • Scanlator"
+			tools:textColor="?android:textColorTertiary" />
 	</LinearLayout>
 
-	<!-- iOS-style accessory icons -->
-	<LinearLayout
+	<ImageView
+		android:id="@+id/imageView_bookmarked"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:orientation="horizontal"
-		android:gravity="center_vertical">
+		android:layout_marginEnd="?android:listPreferredItemPaddingEnd"
+		android:contentDescription="@string/bookmarks"
+		app:srcCompat="@drawable/ic_bookmark" />
 
-		<ImageView
-			android:id="@+id/imageView_bookmarked"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:layout_marginEnd="12dp"
-			android:tint="@color/ios_systemBlue"
-			android:contentDescription="@string/bookmarks"
-			app:srcCompat="@drawable/ic_bookmark" />
-
-		<ImageView
-			android:id="@+id/imageView_downloaded"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:layout_marginEnd="8dp"
-			android:tint="@color/ios_systemGray"
-			android:contentDescription="@string/downloaded"
-			app:srcCompat="@drawable/ic_storage" />
-
-		<!-- iOS-style chevron -->
-		<ImageView
-			android:layout_width="10dp"
-			android:layout_height="18dp"
-			android:src="@drawable/ic_chevron_right"
-			android:tint="@color/ios_systemGray3"
-			android:contentDescription="@null" />
-	</LinearLayout>
+	<ImageView
+		android:id="@+id/imageView_downloaded"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="?android:listPreferredItemPaddingEnd"
+		android:contentDescription="@string/downloaded"
+		app:srcCompat="@drawable/ic_storage" />
 
 </LinearLayout>

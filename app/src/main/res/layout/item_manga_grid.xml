@@ -5,11 +5,11 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="wrap_content"
-	android:layout_margin="6dp"
+	android:layout_margin="2dp"
 	android:background="@drawable/custom_selectable_item_background"
 	android:clipChildren="false"
 	android:orientation="vertical"
-	android:padding="0dp"
+	android:padding="6dp"
 	tools:layout_width="140dp">
 
 	<FrameLayout
@@ -20,10 +20,10 @@
 			android:id="@+id/imageView_cover"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:background="@color/ios_systemGray6"
+			android:background="?colorSurfaceContainer"
 			android:orientation="horizontal"
 			app:allowRgb565="true"
-			app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Kotatsu.Cover.iOS.Grid"
+			app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Kotatsu.Cover"
 			tools:ignore="ContentDescription"
 			tools:src="@tools:sample/backgrounds/scenic[5]" />
 
@@ -39,8 +39,7 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_gravity="top|start"
-			android:layout_marginTop="8dp"
-			android:layout_marginStart="8dp"
+			android:layout_marginTop="10dp"
 			android:background="@drawable/bg_list_icons"
 			android:orientation="horizontal"
 			android:padding="4dp"
@@ -52,7 +51,7 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_gravity="top|end"
-			android:layout_margin="8dp"
+			android:layout_margin="@dimen/margin_small"
 			android:visibility="gone"
 			app:maxCharacterCount="@integer/manga_badge_max_character_count"
 			tools:number="8"
@@ -66,29 +65,12 @@
 		android:layout_height="wrap_content"
 		android:elegantTextHeight="false"
 		android:ellipsize="end"
-		android:maxLines="2"
-		android:paddingTop="6dp"
-		android:paddingBottom="2dp"
-		android:paddingStart="2dp"
-		android:paddingEnd="2dp"
-		android:textSize="14sp"
-		android:fontFamily="sans-serif"
-		android:textColor="@color/ios_label"
-		android:lineSpacingExtra="2dp"
-		tools:text="Manga Title That Could Be Long" />
-
-	<TextView
-		android:id="@+id/textView_subtitle"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:ellipsize="end"
-		android:maxLines="1"
-		android:paddingStart="2dp"
-		android:paddingEnd="2dp"
-		android:paddingBottom="6dp"
-		android:textSize="12sp"
-		android:fontFamily="sans-serif"
-		android:textColor="@color/ios_secondaryLabel"
-		tools:text="Chapter 51" />
+		android:lines="2"
+		android:paddingVertical="4dp"
+		android:textAppearance="?attr/textAppearanceTitleSmall"
+		android:textColor="?android:attr/textColorPrimary"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/thumbnail"
+		tools:text="@tools:sample/lorem" />
 
 </LinearLayout>

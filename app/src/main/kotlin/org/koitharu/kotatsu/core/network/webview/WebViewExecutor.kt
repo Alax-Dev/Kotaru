@@ -76,8 +76,8 @@ class WebViewExecutor @Inject constructor(
 		val maxAttempts = 3
 		var lastException: Throwable? = null
 		
-		repeat(maxAttempts) { attempt ->
-			runCatchingCancellable {
+		for (attempt in 0 until maxAttempts) {
+			val result = runCatchingCancellable {
 				withContext(Dispatchers.Main.immediate) {
 					val webView = obtainWebView()
 					try {
@@ -99,9 +99,12 @@ class WebViewExecutor @Inject constructor(
 						webView.reset()
 					}
 				}
-			}.onSuccess {
+			}
+			
+			if (result.isSuccess) {
 				return@withLock true
-			}.onFailure { e ->
+			}
+			result.exceptionOrNull()?.let { e ->
 				lastException = e
 				e.printStackTraceDebug()
 			}
