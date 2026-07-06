@@ -195,18 +195,18 @@
 	</LinearLayout>
 
 	<!-- Hidden views for compatibility -->
-	<TextView android:id="@+id/textView_source_label" android:visibility="gone" android:layout_width="0" android:layout_height="0" />
-	<TextView android:id="@+id/textView_author_label" android:visibility="gone" android:layout_width="0" android:layout_height="0" />
-	<TextView android:id="@+id/textView_translation_label" android:visibility="gone" android:layout_width="0" android:layout_height="0" />
-	<TextView android:id="@+id/textView_translation" android:visibility="gone" android:layout_width="0" android:layout_height="0" />
-	<TextView android:id="@+id/textView_rating_label" android:visibility="gone" android:layout_width="0" android:layout_height="0" />
-	<RatingBar android:id="@+id/ratingBar_rating" android:visibility="gone" android:layout_width="0" android:layout_height="0" />
-	<TextView android:id="@+id/textView_state_label" android:visibility="gone" android:layout_width="0" android:layout_height="0" />
-	<TextView android:id="@+id/textView_chapters_label" android:visibility="gone" android:layout_width="0" android:layout_height="0" />
-	<TextView android:id="@+id/textView_local_label" android:visibility="gone" android:layout_width="0" android:layout_height="0" />
-	<TextView android:id="@+id/textView_local" android:visibility="gone" android:layout_width="0" android:layout_height="0" />
-	<TextView android:id="@+id/textView_progress_label" android:visibility="gone" android:layout_width="0" android:layout_height="0" />
-	<com.google.android.material.card.MaterialCardView android:id="@+id/card_details" android:visibility="gone" android:layout_width="0" android:layout_height="0" />
-	<androidx.constraintlayout.widget.Barrier android:id="@+id/barrier_table" android:visibility="gone" android:layout_width="0" android:layout_height="0" />
+	<TextView android:id="@+id/textView_source_label" android:visibility="gone" android:layout_width="0dp" android:layout_height="0dp" />
+	<TextView android:id="@+id/textView_author_label" android:visibility="gone" android:layout_width="0dp" android:layout_height="0dp" />
+	<TextView android:id="@+id/textView_translation_label" android:visibility="gone" android:layout_width="0dp" android:layout_height="0dp" />
+	<TextView android:id="@+id/textView_translation" android:visibility="gone" android:layout_width="0dp" android:layout_height="0dp" />
+	<TextView android:id="@+id/textView_rating_label" android:visibility="gone" android:layout_width="0dp" android:layout_height="0dp" />
+	<RatingBar android:id="@+id/ratingBar_rating" android:visibility="gone" android:layout_width="0dp" android:layout_height="0dp" />
+	<TextView android:id="@+id/textView_state_label" android:visibility="gone" android:layout_width="0dp" android:layout_height="0dp" />
+	<TextView android:id="@+id/textView_chapters_label" android:visibility="gone" android:layout_width="0dp" android:layout_height="0dp" />
+	<TextView android:id="@+id/textView_local_label" android:visibility="gone" android:layout_width="0dp" android:layout_height="0dp" />
+	<TextView android:id="@+id/textView_local" android:visibility="gone" android:layout_width="0dp" android:layout_height="0dp" />
+	<TextView android:id="@+id/textView_progress_label" android:visibility="gone" android:layout_width="0dp" android:layout_height="0dp" />
+	<com.google.android.material.card.MaterialCardView android:id="@+id/card_details" android:visibility="gone" android:layout_width="0dp" android:layout_height="0dp" />
+	<androidx.constraintlayout.widget.Barrier android:id="@+id/barrier_table" android:visibility="gone" android:layout_width="0dp" android:layout_height="0dp" />
 
 </merge>
