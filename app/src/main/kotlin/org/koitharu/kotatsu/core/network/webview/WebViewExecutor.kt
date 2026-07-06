@@ -63,7 +63,7 @@ class WebViewExecutor @Inject constructor(
 				}
 				suspendCoroutine { cont ->
 					webView.evaluateJavascript(script) { result ->
-						cont.resume(result?.takeUnless { it == "null" })
+						cont.resumeWith(Result.success(result?.takeUnless { it == "null" }))
 					}
 				}
 			} finally {

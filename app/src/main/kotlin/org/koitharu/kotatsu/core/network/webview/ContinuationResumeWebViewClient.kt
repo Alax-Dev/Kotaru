@@ -17,7 +17,7 @@ open class ContinuationResumeWebViewClient(
 	protected fun resumeContinuation(view: WebView?) {
 		if (continuation !is CancellableContinuation || continuation.isActive) {
 			view?.webViewClient = WebViewClient() // reset to default
-			continuation.resume(Unit)
+			continuation.resumeWith(Result.success(Unit))
 		}
 	}
 }

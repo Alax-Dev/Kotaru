@@ -72,7 +72,7 @@ class AutoCaptchaSolver @Inject constructor(
 					// Check if challenge is solved
 					val clearance = CloudFlareHelper.getClearanceCookie(cookieJar, url)
 					if (clearance != null && clearance != oldClearance) {
-						if (cont.isActive) cont.resume(true)
+						if (cont.isActive) cont.resumeWith(Result.success(true))
 					}
 				}
 			}
@@ -81,7 +81,7 @@ class AutoCaptchaSolver @Inject constructor(
 			// Timeout fallback
 			cont.invokeOnCancellation { }
 			android.os.Handler(android.os.Looper.getMainLooper()).postDelayed({
-				if (cont.isActive) cont.resume(false)
+				if (cont.isActive) cont.resumeWith(Result.success(false))
 			}, timeoutMs)
 		}
 	}
