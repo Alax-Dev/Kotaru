@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+	<!-- iOS-style Theme for Kotatsu -->
+	<style name="Theme.Kotatsu.iOS" parent="Theme.Kotatsu">
+		<!-- iOS-style primary colors -->
+		<item name="colorPrimary">@color/ios_systemBlue</item>
+		<item name="colorPrimaryContainer">@color/ios_systemBlue</item>
+		<item name="colorOnPrimary">#FFFFFF</item>
+		<item name="colorOnPrimaryContainer">@color/ios_label</item>
+		<item name="colorSecondary">@color/ios_systemGray</item>
+		<item name="colorSecondaryContainer">@color/ios_systemGray6</item>
+		<item name="colorOnSecondary">#FFFFFF</item>
+		<item name="colorOnSecondaryContainer">@color/ios_label</item>
+		<item name="colorTertiary">@color/ios_systemPurple</item>
+		<item name="colorTertiaryContainer">@color/ios_systemPurple</item>
+
+		<!-- iOS-style surface colors -->
+		<item name="colorSurface">@color/ios_background</item>
+		<item name="colorSurfaceDim">@color/ios_background</item>
+		<item name="colorSurfaceBright">@color/ios_background</item>
+		<item name="colorSurfaceContainerLowest">@color/ios_background</item>
+		<item name="colorSurfaceContainerLow">@color/ios_secondaryBackground</item>
+		<item name="colorSurfaceContainer">@color/ios_secondaryBackground</item>
+		<item name="colorSurfaceContainerHigh">@color/ios_systemGray6</item>
+		<item name="colorSurfaceContainerHighest">@color/ios_systemGray5</item>
+		<item name="colorSurfaceVariant">@color/ios_secondaryBackground</item>
+		<item name="colorOnSurface">@color/ios_label</item>
+		<item name="colorOnSurfaceVariant">@color/ios_secondaryLabel</item>
+
+		<!-- iOS-style outline -->
+		<item name="colorOutline">@color/ios_separator</item>
+		<item name="colorOutlineVariant">@color/ios_systemGray5</item>
+
+		<!-- iOS-style navigation bar -->
+		<item name="android:statusBarColor">@android:color/transparent</item>
+		<item name="android:navigationBarColor">@color/ios_background</item>
+		<item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+
+		<!-- iOS-style bottom navigation -->
+		<item name="bottomNavigationStyle">@style/Widget.Kotatsu.BottomNavigationView.iOS</item>
+
+		<!-- iOS-style toolbar -->
+		<item name="toolbarStyle">@style/Widget.Kotatsu.Toolbar.iOS</item>
+
+		<!-- iOS-style card -->
+		<item name="cardViewStyle">@style/Widget.Kotatsu.CardView.iOS</item>
+
+		<!-- iOS-style bottom sheet -->
+		<item name="bottomSheetDialogTheme">@style/ThemeOverlay.Kotatsu.BottomSheetDialog.iOS</item>
+	</style>
+
+	<!-- iOS-style Bottom Navigation -->
+	<style name="Widget.Kotatsu.BottomNavigationView.iOS" parent="Widget.Material3.BottomNavigationView">
+		<item name="backgroundTint">@color/ios_background</item>
+		<item name="itemIconTint">@color/bottom_nav_color_ios</item>
+		<item name="itemTextColor">@color/bottom_nav_color_ios</item>
+		<item name="itemActiveIndicatorStyle">@style/Widget.Kotatsu.BottomNavigationView.iOS.ActiveIndicator</item>
+		<item name="elevation">0dp</item>
+		<item name="android:elevation">0dp</item>
+		<item name="itemPaddingTop">4dp</item>
+		<item name="itemPaddingBottom">4dp</item>
+		<item name="labelVisibilityMode">labeled</item>
+		<item name="android:paddingTop">8dp</item>
+		<item name="android:paddingBottom">8dp</item>
+	</style>
+
+	<style name="Widget.Kotatsu.BottomNavigationView.iOS.ActiveIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+		<item name="android:color">@color/ios_fill</item>
+		<item name="shapeAppearance">@style/ShapeAppearance.Kotatsu.iOS.Indicator</item>
+	</style>
+
+	<style name="ShapeAppearance.Kotatsu.iOS.Indicator" parent="">
+		<item name="cornerFamily">rounded</item>
+		<item name="cornerSize">20dp</item>
+	</style>
+
+	<!-- iOS-style Toolbar -->
+	<style name="Widget.Kotatsu.Toolbar.iOS" parent="Widget.Material3.Toolbar">
+		<item name="titleTextColor">@color/ios_label</item>
+		<item name="subtitleTextColor">@color/ios_secondaryLabel</item>
+		<item name="backgroundTint">@color/ios_background</item>
+		<item name="elevation">0dp</item>
+		<item name="android:elevation">0dp</item>
+	</style>
+
+	<!-- iOS-style Card -->
+	<style name="Widget.Kotatsu.CardView.iOS" parent="Widget.Material3.CardView.Filled">
+		<item name="cardBackgroundColor">@color/ios_tertiaryBackground</item>
+		<item name="cardCornerRadius">12dp</item>
+		<item name="cardElevation">0dp</item>
+		<item name="strokeWidth">0dp</item>
+	</style>
+
+	<!-- iOS-style Bottom Sheet -->
+	<style name="ThemeOverlay.Kotatsu.BottomSheetDialog.iOS" parent="ThemeOverlay.Material3.BottomSheetDialog">
+		<item name="bottomSheetStyle">@style/Widget.Kotatsu.BottomSheet.iOS</item>
+	</style>
+
+	<style name="Widget.Kotatsu.BottomSheet.iOS" parent="Widget.Material3.BottomSheet">
+		<item name="shapeAppearanceOverlay">@style/ShapeAppearance.Kotatsu.iOS.BottomSheet</item>
+		<item name="backgroundTint">@color/ios_background</item>
+	</style>
+
+	<style name="ShapeAppearance.Kotatsu.iOS.BottomSheet" parent="">
+		<item name="cornerFamily">rounded</item>
+		<item name="cornerSizeTopLeft">16dp</item>
+		<item name="cornerSizeTopRight">16dp</item>
+	</style>
+
+	<!-- iOS-style Card for Manga Items -->
+	<style name="Widget.Kotatsu.MangaCard.iOS" parent="">
+		<item name="cardCornerRadius">12dp</item>
+		<item name="cardElevation">0dp</item>
+		<item name="cardBackgroundColor">@color/ios_tertiaryBackground</item>
+		<item name="strokeWidth">0.5dp</item>
+		<item name="strokeColor">@color/ios_separator</item>
+	</style>
+
+	<!-- iOS-style List Item -->
+	<style name="Widget.Kotatsu.ListItem.iOS" parent="">
+		<item name="android:background">@color/ios_background</item>
+		<item name="android:paddingStart">16dp</item>
+		<item name="android:paddingEnd">16dp</item>
+		<item name="android:paddingTop">12dp</item>
+		<item name="android:paddingBottom">12dp</item>
+	</style>
+
+	<!-- iOS-style Section Header -->
+	<style name="Widget.Kotatsu.SectionHeader.iOS" parent="">
+		<item name="android:textSize">13sp</item>
+		<item name="android:textColor">@color/ios_secondaryLabel</item>
+		<item name="android:textAllCaps">true</item>
+		<item name="android:paddingStart">16dp</item>
+		<item name="android:paddingEnd">16dp</item>
+		<item name="android:paddingTop">8dp</item>
+		<item name="android:paddingBottom">4dp</item>
+		<item name="android:fontFamily">sans-serif-medium</item>
+	</style>
+
+	<!-- iOS-style Button -->
+	<style name="Widget.Kotatsu.Button.iOS" parent="Widget.Material3.Button">
+		<item name="cornerRadius">10dp</item>
+		<item name="android:textSize">17sp</item>
+		<item name="android:fontFamily">sans-serif-medium</item>
+		<item name="android:minHeight">50dp</item>
+	</style>
+
+	<!-- iOS-style Chip -->
+	<style name="Widget.Kotatsu.Chip.iOS" parent="Widget.Material3.Chip.Filter">
+		<item name="chipCornerRadius">8dp</item>
+		<item name="chipBackgroundColor">@color/ios_systemGray6</item>
+		<item name="android:textColor">@color/ios_label</item>
+		<item name="chipStrokeWidth">0dp</item>
+		<item name="chipMinHeight">32dp</item>
+		<item name="android:textSize">14sp</item>
+	</style>
+
+	<!-- iOS-style Search Bar -->
+	<style name="Widget.Kotatsu.SearchBar.iOS" parent="Widget.Material3.SearchBar">
+		<item name="backgroundTint">@color/ios_systemGray6</item>
+		<item name="cornerRadius">10dp</item>
+		<item name="elevation">0dp</item>
+		<item name="android:elevation">0dp</item>
+		<item name="android:textSize">17sp</item>
+	</style>
+
+	<!-- iOS-style Divider -->
+	<style name="Widget.Kotatsu.Divider.iOS" parent="">
+		<item name="android:background">@color/ios_separator</item>
+		<item name="android:layout_height">0.5dp</item>
+	</style>
+</resources>

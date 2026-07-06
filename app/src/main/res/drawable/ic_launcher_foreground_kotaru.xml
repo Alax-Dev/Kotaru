@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+	android:width="108dp"
+	android:height="108dp"
+	android:viewportWidth="108"
+	android:viewportHeight="108">
+
+	<!-- Background circle with gradient effect -->
+	<path
+		android:fillColor="#007AFF"
+		android:pathData="M54,54m-40,0a40,40 0,1 1,80 0a40,40 0,1 1,-80 0" />
+
+	<!-- Inner shadow/depth -->
+	<path
+		android:fillColor="#0062CC"
+		android:pathData="M54,54m-36,0a36,36 0,1 1,72 0a36,36 0,1 1,-72 0" />
+
+	<!-- Main background -->
+	<path
+		android:fillColor="#0A84FF"
+		android:pathData="M54,54m-34,0a34,34 0,1 1,68 0a34,34 0,1 1,-68 0" />
+
+	<!-- Book/Manga pages (left) -->
+	<path
+		android:fillColor="#FFFFFF"
+		android:pathData="M32,30 L50,30 L50,78 L32,78 Z"
+		android:strokeColor="#FFFFFF"
+		android:strokeWidth="0" />
+
+	<!-- Book spine shadow -->
+	<path
+		android:fillColor="#E0E0E0"
+		android:pathData="M32,30 L34,30 L34,78 L32,78 Z" />
+
+	<!-- Book page lines (decorative) -->
+	<path
+		android:fillColor="#B0D4FF"
+		android:pathData="M36,38 L48,38 L48,39 L36,39 Z" />
+	<path
+		android:fillColor="#B0D4FF"
+		android:pathData="M36,43 L48,43 L48,44 L36,44 Z" />
+	<path
+		android:fillColor="#B0D4FF"
+		android:pathData="M36,48 L44,48 L44,49 L36,49 Z" />
+
+	<!-- Book/Manga pages (right) -->
+	<path
+		android:fillColor="#FFFFFF"
+		android:pathData="M56,30 L74,30 L74,78 L56,78 Z" />
+
+	<!-- Book spine shadow right -->
+	<path
+		android:fillColor="#E0E0E0"
+		android:pathData="M72,30 L74,30 L74,78 L72,78 Z" />
+
+	<!-- Book page lines right (decorative) -->
+	<path
+		android:fillColor="#B0D4FF"
+		android:pathData="M58,38 L70,38 L70,39 L58,39 Z" />
+	<path
+		android:fillColor="#B0D4FF"
+		android:pathData="M58,43 L70,43 L70,44 L58,44 Z" />
+	<path
+		android:fillColor="#B0D4FF"
+		android:pathData="M58,48 L66,48 L66,49 L58,49 Z" />
+
+	<!-- "K" letter stylized -->
+	<path
+		android:fillColor="#FFFFFF"
+		android:pathData="M44,42 L44,66 L48,66 L48,56 L56,66 L62,66 L53,55 L61,42 L55,42 L49,51 L48,51 L48,42 Z" />
+
+	<!-- Star accent (top right) -->
+	<path
+		android:fillColor="#FFD60A"
+		android:pathData="M72,26 L73.5,30 L78,30 L74.5,32.5 L76,37 L72,34.5 L68,37 L69.5,32.5 L66,30 L70.5,30 Z" />
+
+</vector>

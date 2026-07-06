@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- iOS System Colors - Light Mode -->
+	<color name="ios_systemBlue">#007AFF</color>
+	<color name="ios_systemGreen">#34C759</color>
+	<color name="ios_systemIndigo">#5856D6</color>
+	<color name="ios_systemOrange">#FF9500</color>
+	<color name="ios_systemPink">#FF2D55</color>
+	<color name="ios_systemPurple">#AF52DE</color>
+	<color name="ios_systemRed">#FF3B30</color>
+	<color name="ios_systemTeal">#5AC8FA</color>
+	<color name="ios_systemYellow">#FFCC00</color>
+
+	<!-- iOS Gray Scale -->
+	<color name="ios_systemGray">#8E8E93</color>
+	<color name="ios_systemGray2">#AEAEB2</color>
+	<color name="ios_systemGray3">#C7C7CC</color>
+	<color name="ios_systemGray4">#D1D1D6</color>
+	<color name="ios_systemGray5">#E5E5EA</color>
+	<color name="ios_systemGray6">#F2F2F7</color>
+
+	<!-- iOS Background Colors -->
+	<color name="ios_background">#FFFFFF</color>
+	<color name="ios_secondaryBackground">#F2F2F7</color>
+	<color name="ios_tertiaryBackground">#FFFFFF</color>
+	<color name="ios_groupedBackground">#F2F2F7</color>
+
+	<!-- iOS Label Colors -->
+	<color name="ios_label">#000000</color>
+	<color name="ios_secondaryLabel">#3C3C43</color>
+	<color name="ios_secondaryLabel_60">#3C3C4399</color>
+	<color name="ios_tertiaryLabel">#3C3C434D</color>
+	<color name="ios_quaternaryLabel">#3C3C432D</color>
+
+	<!-- iOS Separator -->
+	<color name="ios_separator">#3C3C4349</color>
+	<color name="ios_opaqueSeparator">#C6C6C8</color>
+
+	<!-- iOS Fill Colors -->
+	<color name="ios_fill">#78788033</color>
+	<color name="ios_secondaryFill">#78788029</color>
+	<color name="ios_tertiaryFill">#7676801F</color>
+	<color name="ios_quaternaryFill">#74748014</color>
+
+	<!-- App Accent Colors (iOS-style) -->
+	<color name="ios_accent">#007AFF</color>
+	<color name="ios_accentDark">#0A84FF</color>
+
+	<!-- Dark Mode Colors -->
+	<color name="ios_background_night">#000000</color>
+	<color name="ios_secondaryBackground_night">#1C1C1E</color>
+	<color name="ios_tertiary_night">#2C2C2E</color>
+	<color name="ios_groupedBackground_night">#000000</color>
+	<color name="ios_label_night">#FFFFFF</color>
+	<color name="ios_secondaryLabel_night">#EBEBF5</color>
+	<color name="ios_secondaryLabel_60_night">#EBEBF599</color>
+	<color name="ios_tertiaryLabel_night">#EBEBF54D</color>
+	<color name="ios_separator_night">#54545899</color>
+	<color name="ios_opaqueSeparator_night">#38383A</color>
+	<color name="ios_fill_night">#78788036</color>
+	<color name="ios_secondaryFill_night">#7878802E</color>
+	<color name="ios_systemGray_night">#8E8E93</color>
+	<color name="ios_systemGray2_night">#636366</color>
+	<color name="ios_systemGray3_night">#48484A</color>
+	<color name="ios_systemGray4_night">#3A3A3C</color>
+	<color name="ios_systemGray5_night">#2C2C2E</color>
+	<color name="ios_systemGray6_night">#1C1C1E</color>
+</resources>

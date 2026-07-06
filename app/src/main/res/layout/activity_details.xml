@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/ios_background"
+	android:clipToPadding="false"
+	tools:context=".details.ui.DetailsActivity"
+	tools:ignore="ViewBindingType"
+	tools:viewBindingType="android.view.ViewGroup">
+
+	<com.google.android.material.appbar.AppBarLayout
+		android:id="@+id/appbar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/ios_background"
+		android:elevation="0dp"
+		android:fitsSystemWindows="true"
+		app:elevation="0dp"
+		app:liftOnScroll="false">
+
+		<com.google.android.material.appbar.MaterialToolbar
+			android:id="@id/toolbar"
+			style="@style/Widget.Kotatsu.Toolbar.iOS"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" />
+
+	</com.google.android.material.appbar.AppBarLayout>
+
+	<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+		android:id="@+id/swipeRefreshLayout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+		<androidx.core.widget.NestedScrollView
+			android:id="@+id/scrollView"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@color/ios_background"
+			android:clipToPadding="false"
+			android:scrollIndicators="top"
+			android:scrollbars="vertical">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:orientation="vertical"
+				android:paddingBottom="@dimen/margin_normal">
+
+				<!-- iOS-style Header Section -->
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					android:padding="16dp"
+					android:gravity="top">
+
+					<!-- iOS-style Rounded Cover -->
+					<FrameLayout
+						android:layout_width="100dp"
+						android:layout_height="140dp"
+						android:layout_marginEnd="16dp">
+
+						<org.koitharu.kotatsu.image.ui.CoverImageView
+							android:id="@+id/imageView_cover"
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:background="@color/ios_systemGray6"
+							android:clipToOutline="true"
+							android:scaleType="centerCrop"
+							app:allowRgb565="false"
+							app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Kotatsu.Cover.iOS"
+							app:useExistingDrawable="true"
+							tools:background="@tools:sample/backgrounds/scenic[5]"
+							tools:ignore="ContentDescription" />
+
+						<org.koitharu.kotatsu.core.ui.widgets.BadgeView
+							android:id="@+id/badge_nsfw"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_gravity="top|end"
+							android:layout_margin="4dp"
+							android:visibility="gone"
+							tools:visibility="visible" />
+					</FrameLayout>
+
+					<!-- Title & Info -->
+					<LinearLayout
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:orientation="vertical">
+
+						<org.koitharu.kotatsu.core.ui.widgets.SelectableTextView
+							android:id="@+id/textView_title"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:ellipsize="end"
+							android:maxLines="3"
+							android:textColor="@color/ios_label"
+							android:textSize="22sp"
+							android:fontFamily="sans-serif-medium"
+							android:textIsSelectable="true"
+							tools:text="Manga Title" />
+
+						<org.koitharu.kotatsu.core.ui.widgets.SelectableTextView
+							android:id="@+id/textView_subtitle"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="4dp"
+							android:ellipsize="end"
+							android:maxLines="2"
+							android:textColor="@color/ios_secondaryLabel"
+							android:textSize="15sp"
+							android:fontFamily="sans-serif"
+							android:textIsSelectable="true"
+							tools:text="Author Name · Ongoing" />
+
+						<!-- iOS-style Action Buttons -->
+						<LinearLayout
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="12dp"
+							android:orientation="horizontal">
+
+							<com.google.android.material.button.MaterialButton
+								android:id="@+id/button_read"
+								style="@style/Widget.Kotatsu.Button.iOS"
+								android:layout_width="0dp"
+								android:layout_height="40dp"
+								android:layout_weight="1"
+								android:layout_marginEnd="8dp"
+								android:text="@string/read"
+								android:textSize="15sp"
+								app:cornerRadius="10dp"
+								app:icon="@drawable/ic_read"
+								app:iconGravity="textStart"
+								app:iconSize="18dp" />
+
+							<com.google.android.material.button.MaterialButton
+								android:id="@+id/button_favorite"
+								style="@style/Widget.Material3.Button.OutlinedButton"
+								android:layout_width="40dp"
+								android:layout_height="40dp"
+								android:insetTop="0dp"
+								android:insetBottom="0dp"
+								app:cornerRadius="10dp"
+								app:icon="@drawable/ic_heart_outline"
+								app:iconGravity="textStart"
+								app:iconSize="20dp"
+								app:iconTint="@color/ios_systemRed" />
+						</LinearLayout>
+					</LinearLayout>
+				</LinearLayout>
+
+				<!-- iOS-style Separator -->
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="0.5dp"
+					android:layout_marginStart="16dp"
+					android:background="@color/ios_separator" />
+
+				<!-- iOS-style Info Section (table style) -->
+				<include layout="@layout/layout_details_table" />
+
+				<!-- iOS-style Separator -->
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="0.5dp"
+					android:layout_marginStart="16dp"
+					android:background="@color/ios_separator" />
+
+				<!-- Description Section -->
+				<TextView
+					android:id="@+id/textView_description_title"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:paddingStart="16dp"
+					android:paddingEnd="16dp"
+					android:paddingTop="16dp"
+					android:paddingBottom="8dp"
+					android:text="@string/description"
+					android:textColor="@color/ios_label"
+					android:textSize="13sp"
+					android:fontFamily="sans-serif-medium"
+					android:textAllCaps="true" />
+
+				<org.koitharu.kotatsu.core.ui.widgets.SelectableTextView
+					android:id="@+id/textView_description"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:paddingStart="16dp"
+					android:paddingEnd="16dp"
+					android:paddingBottom="16dp"
+					android:ellipsize="end"
+					android:lineSpacingMultiplier="1.3"
+					android:maxLines="@integer/details_description_lines"
+					android:textColor="@color/ios_secondaryLabel"
+					android:textSize="15sp"
+					android:fontFamily="sans-serif"
+					android:textIsSelectable="true"
+					tools:ignore="UnusedAttribute"
+					tools:text="@tools:sample/lorem/random" />
+
+				<!-- Tags Section -->
+				<org.koitharu.kotatsu.core.ui.widgets.ChipsView
+					android:id="@+id/chips_tags"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:paddingHorizontal="16dp"
+					android:paddingBottom="16dp"
+					app:chipSpacingHorizontal="6dp"
+					app:chipSpacingVertical="6dp" />
+
+				<!-- iOS-style Separator -->
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="0.5dp"
+					android:layout_marginStart="16dp"
+					android:background="@color/ios_separator" />
+
+				<!-- Related Manga Section -->
+				<TextView
+					android:id="@+id/textView_related_title"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:paddingStart="16dp"
+					android:paddingEnd="16dp"
+					android:paddingTop="16dp"
+					android:paddingBottom="8dp"
+					android:text="@string/related_manga"
+					android:textColor="@color/ios_label"
+					android:textSize="13sp"
+					android:fontFamily="sans-serif-medium"
+					android:textAllCaps="true"
+					android:visibility="gone" />
+
+				<androidx.recyclerview.widget.RecyclerView
+					android:id="@+id/recyclerView_related"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:clipToPadding="false"
+					android:nestedScrollingEnabled="false"
+					android:orientation="horizontal"
+					android:paddingStart="12dp"
+					android:paddingEnd="12dp"
+					android:visibility="gone"
+					app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+					tools:listitem="@layout/item_manga_grid"
+					tools:visibility="visible" />
+
+				<androidx.constraintlayout.widget.Group
+					android:id="@+id/group_related"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:visibility="gone"
+					app:constraint_referenced_ids="recyclerView_related,textView_related_title" />
+
+			</LinearLayout>
+
+		</androidx.core.widget.NestedScrollView>
+	</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+	<androidx.fragment.app.FragmentContainerView
+		android:id="@+id/container_bottom_sheet"
+		style="@style/Widget.Kotatsu.BottomSheet.iOS"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:elevation="6dp"
+		android:nestedScrollingEnabled="false"
+		android:outlineProvider="background"
+		app:behavior_fitToContents="false"
+		app:behavior_hideable="false"
+		app:behavior_peekHeight="@dimen/details_bs_peek_height"
+		app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+		app:paddingBottomSystemWindowInsets="false"
+		tools:layout="@layout/sheet_chapters_pages" />
+
+	<View
+		android:id="@+id/navbarDim"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="bottom"
+		android:background="@color/ios_background"
+		android:elevation="9dp"
+		tools:layout_height="10dp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

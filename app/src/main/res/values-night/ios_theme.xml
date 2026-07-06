@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+	<!-- iOS Dark Mode Theme -->
+	<style name="Theme.Kotatsu.iOS" parent="Theme.Kotatsu">
+		<!-- iOS Dark primary colors -->
+		<item name="colorPrimary">@color/ios_accentDark</item>
+		<item name="colorPrimaryContainer">@color/ios_accentDark</item>
+		<item name="colorOnPrimary">#FFFFFF</item>
+		<item name="colorOnPrimaryContainer">@color/ios_label_night</item>
+		<item name="colorSecondary">@color/ios_systemGray_night</item>
+		<item name="colorSecondaryContainer">@color/ios_systemGray6_night</item>
+		<item name="colorOnSecondary">#FFFFFF</item>
+		<item name="colorOnSecondaryContainer">@color/ios_label_night</item>
+		<item name="colorTertiary">@color/ios_systemPurple</item>
+
+		<!-- iOS Dark surface colors -->
+		<item name="colorSurface">@color/ios_background_night</item>
+		<item name="colorSurfaceDim">@color/ios_background_night</item>
+		<item name="colorSurfaceBright">@color/ios_secondaryBackground_night</item>
+		<item name="colorSurfaceContainerLowest">@color/ios_background_night</item>
+		<item name="colorSurfaceContainerLow">@color/ios_secondaryBackground_night</item>
+		<item name="colorSurfaceContainer">@color/ios_secondaryBackground_night</item>
+		<item name="colorSurfaceContainerHigh">@color/ios_systemGray6_night</item>
+		<item name="colorSurfaceContainerHighest">@color/ios_systemGray5_night</item>
+		<item name="colorSurfaceVariant">@color/ios_secondaryBackground_night</item>
+		<item name="colorOnSurface">@color/ios_label_night</item>
+		<item name="colorOnSurfaceVariant">@color/ios_secondaryLabel_night</item>
+
+		<!-- iOS Dark outline -->
+		<item name="colorOutline">@color/ios_separator_night</item>
+		<item name="colorOutlineVariant">@color/ios_systemGray5_night</item>
+
+		<!-- iOS Dark navigation bar -->
+		<item name="android:statusBarColor">@android:color/transparent</item>
+		<item name="android:navigationBarColor">@color/ios_background_night</item>
+		<item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">false</item>
+
+		<!-- iOS Dark bottom navigation -->
+		<item name="bottomNavigationStyle">@style/Widget.Kotatsu.BottomNavigationView.iOS.Dark</item>
+
+		<!-- iOS Dark toolbar -->
+		<item name="toolbarStyle">@style/Widget.Kotatsu.Toolbar.iOS.Dark</item>
+
+		<!-- iOS Dark card -->
+		<item name="cardViewStyle">@style/Widget.Kotatsu.CardView.iOS.Dark</item>
+	</style>
+
+	<style name="Widget.Kotatsu.BottomNavigationView.iOS.Dark" parent="Widget.Material3.BottomNavigationView">
+		<item name="backgroundTint">@color/ios_secondaryBackground_night</item>
+		<item name="itemIconTint">@color/bottom_nav_color_ios_dark</item>
+		<item name="itemTextColor">@color/bottom_nav_color_ios_dark</item>
+		<item name="elevation">0dp</item>
+		<item name="android:elevation">0dp</item>
+	</style>
+
+	<style name="Widget.Kotatsu.Toolbar.iOS.Dark" parent="Widget.Material3.Toolbar">
+		<item name="titleTextColor">@color/ios_label_night</item>
+		<item name="subtitleTextColor">@color/ios_secondaryLabel_night</item>
+		<item name="backgroundTint">@color/ios_secondaryBackground_night</item>
+		<item name="elevation">0dp</item>
+		<item name="android:elevation">0dp</item>
+	</style>
+
+	<style name="Widget.Kotatsu.CardView.iOS.Dark" parent="Widget.Material3.CardView.Filled">
+		<item name="cardBackgroundColor">@color/ios_tertiary_night</item>
+		<item name="cardCornerRadius">12dp</item>
+		<item name="cardElevation">0dp</item>
+	</style>
+</resources>

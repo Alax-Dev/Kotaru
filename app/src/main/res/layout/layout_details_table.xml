@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	tools:parentTag="LinearLayout">
+
+	<!-- iOS-style Settings-like info rows -->
+
+	<!-- Source Row -->
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:paddingStart="16dp"
+		android:paddingEnd="16dp"
+		android:paddingTop="12dp"
+		android:paddingBottom="12dp"
+		android:gravity="center_vertical">
+
+		<TextView
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="@string/source"
+			android:textColor="@color/ios_label"
+			android:textSize="17sp"
+			android:fontFamily="sans-serif" />
+
+		<TextView
+			android:id="@+id/textView_source"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textColor="@color/ios_secondaryLabel"
+			android:textSize="17sp"
+			android:fontFamily="sans-serif"
+			tools:text="MangaGeko" />
+	</LinearLayout>
+
+	<!-- iOS-style Inset Separator -->
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="0.5dp"
+		android:layout_marginStart="16dp"
+		android:background="@color/ios_separator" />
+
+	<!-- Author Row -->
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:paddingStart="16dp"
+		android:paddingEnd="16dp"
+		android:paddingTop="12dp"
+		android:paddingBottom="12dp"
+		android:gravity="center_vertical">
+
+		<TextView
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="@string/author"
+			android:textColor="@color/ios_label"
+			android:textSize="17sp"
+			android:fontFamily="sans-serif" />
+
+		<TextView
+			android:id="@+id/textView_author"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textColor="@color/ios_secondaryLabel"
+			android:textSize="17sp"
+			android:fontFamily="sans-serif"
+			tools:text="Author Name" />
+	</LinearLayout>
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="0.5dp"
+		android:layout_marginStart="16dp"
+		android:background="@color/ios_separator" />
+
+	<!-- State Row -->
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:paddingStart="16dp"
+		android:paddingEnd="16dp"
+		android:paddingTop="12dp"
+		android:paddingBottom="12dp"
+		android:gravity="center_vertical">
+
+		<TextView
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="@string/state"
+			android:textColor="@color/ios_label"
+			android:textSize="17sp"
+			android:fontFamily="sans-serif" />
+
+		<TextView
+			android:id="@+id/textView_state"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textColor="@color/ios_secondaryLabel"
+			android:textSize="17sp"
+			android:fontFamily="sans-serif"
+			tools:text="Ongoing" />
+	</LinearLayout>
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="0.5dp"
+		android:layout_marginStart="16dp"
+		android:background="@color/ios_separator" />
+
+	<!-- Chapters Row -->
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:paddingStart="16dp"
+		android:paddingEnd="16dp"
+		android:paddingTop="12dp"
+		android:paddingBottom="12dp"
+		android:gravity="center_vertical">
+
+		<TextView
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="@string/chapters"
+			android:textColor="@color/ios_label"
+			android:textSize="17sp"
+			android:fontFamily="sans-serif" />
+
+		<TextView
+			android:id="@+id/textView_chapters"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textColor="@color/ios_secondaryLabel"
+			android:textSize="17sp"
+			android:fontFamily="sans-serif"
+			tools:text="10 of 50" />
+	</LinearLayout>
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="0.5dp"
+		android:layout_marginStart="16dp"
+		android:background="@color/ios_separator" />
+
+	<!-- Progress Row -->
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:paddingStart="16dp"
+		android:paddingEnd="16dp"
+		android:paddingTop="12dp"
+		android:paddingBottom="12dp"
+		android:gravity="center_vertical">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/progress"
+			android:textColor="@color/ios_label"
+			android:textSize="17sp"
+			android:fontFamily="sans-serif" />
+
+		<com.google.android.material.progressindicator.LinearProgressIndicator
+			android:id="@+id/progress"
+			style="?linearProgressIndicatorStyle"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:layout_marginStart="16dp"
+			android:layout_marginEnd="12dp"
+			android:indeterminate="false"
+			android:max="100"
+			app:trackColor="@color/ios_systemGray5"
+			tools:progress="40" />
+
+		<TextView
+			android:id="@+id/textView_progress"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textColor="@color/ios_secondaryLabel"
+			android:textSize="17sp"
+			android:fontFamily="sans-serif"
+			tools:text="40%" />
+	</LinearLayout>
+
+
+
+	<!-- Hidden views for code compatibility -->
+	<TextView android:id="@+id/textView_source_label" android:visibility="gone" android:layout_width="0" android:layout_height="0" />
+	<TextView android:id="@+id/textView_author_label" android:visibility="gone" android:layout_width="0" android:layout_height="0" />
+	<TextView android:id="@+id/textView_translation_label" android:visibility="gone" android:layout_width="0" android:layout_height="0" />
+	<TextView android:id="@+id/textView_translation" android:visibility="gone" android:layout_width="0" android:layout_height="0" />
+	<TextView android:id="@+id/textView_rating_label" android:visibility="gone" android:layout_width="0" android:layout_height="0" />
+	<RatingBar android:id="@+id/ratingBar_rating" android:visibility="gone" android:layout_width="0" android:layout_height="0" />
+	<TextView android:id="@+id/textView_state_label" android:visibility="gone" android:layout_width="0" android:layout_height="0" />
+	<TextView android:id="@+id/textView_chapters_label" android:visibility="gone" android:layout_width="0" android:layout_height="0" />
+	<TextView android:id="@+id/textView_local_label" android:visibility="gone" android:layout_width="0" android:layout_height="0" />
+	<TextView android:id="@+id/textView_progress_label" android:visibility="gone" android:layout_width="0" android:layout_height="0" />
+	<com.google.android.material.card.MaterialCardView android:id="@+id/card_details" android:visibility="gone" android:layout_width="0" android:layout_height="0" />
+	<androidx.constraintlayout.widget.Barrier android:id="@+id/barrier_table" android:visibility="gone" android:layout_width="0" android:layout_height="0" />
+
+</merge>

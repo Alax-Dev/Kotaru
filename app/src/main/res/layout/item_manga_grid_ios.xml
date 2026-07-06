@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_margin="6dp"
+	android:background="@drawable/custom_selectable_item_background"
+	android:clipChildren="false"
+	android:orientation="vertical"
+	android:padding="0dp"
+	tools:layout_width="140dp">
+
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<org.koitharu.kotatsu.image.ui.CoverImageView
+			android:id="@+id/imageView_cover"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@color/ios_systemGray6"
+			android:orientation="horizontal"
+			app:allowRgb565="true"
+			app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Kotatsu.Cover.iOS.Grid"
+			tools:ignore="ContentDescription"
+			tools:src="@tools:sample/backgrounds/scenic[5]" />
+
+		<org.koitharu.kotatsu.history.ui.util.ReadingProgressView
+			android:id="@+id/progressView"
+			android:layout_width="@dimen/card_indicator_size"
+			android:layout_height="@dimen/card_indicator_size"
+			android:layout_gravity="bottom|end"
+			android:layout_margin="@dimen/card_indicator_offset" />
+
+		<org.koitharu.kotatsu.core.ui.widgets.IconsView
+			android:id="@+id/iconsView"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="top|start"
+			android:layout_marginTop="8dp"
+			android:layout_marginStart="8dp"
+			android:background="@drawable/bg_list_icons"
+			android:orientation="horizontal"
+			android:padding="4dp"
+			app:iconSize="14dp"
+			app:iconSpacing="4dp" />
+
+		<org.koitharu.kotatsu.core.ui.widgets.BadgeView
+			android:id="@+id/badge"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="top|end"
+			android:layout_margin="8dp"
+			android:visibility="gone"
+			app:maxCharacterCount="@integer/manga_badge_max_character_count"
+			tools:number="8"
+			tools:visibility="visible" />
+
+	</FrameLayout>
+
+	<TextView
+		android:id="@+id/textView_title"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:elegantTextHeight="false"
+		android:ellipsize="end"
+		android:maxLines="2"
+		android:paddingTop="6dp"
+		android:paddingBottom="2dp"
+		android:paddingStart="2dp"
+		android:paddingEnd="2dp"
+		android:textSize="14sp"
+		android:fontFamily="sans-serif"
+		android:textColor="@color/ios_label"
+		android:lineSpacingExtra="2dp"
+		tools:text="Manga Title That Could Be Long" />
+
+	<TextView
+		android:id="@+id/textView_subtitle"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:ellipsize="end"
+		android:maxLines="1"
+		android:paddingStart="2dp"
+		android:paddingEnd="2dp"
+		android:paddingBottom="6dp"
+		android:textSize="12sp"
+		android:fontFamily="sans-serif"
+		android:textColor="@color/ios_secondaryLabel"
+		tools:text="Chapter 51" />
+
+</LinearLayout>
