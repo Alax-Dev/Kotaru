@@ -58,7 +58,7 @@ class PageSaveHelper @AssistedInject constructor(
 	override fun onActivityResult(result: Uri?) {
 		continuation?.also { cont ->
 			if (result != null) {
-				cont.resume(result)
+				cont.resumeWith(Result.success(result))
 			} else {
 				cont.cancel()
 			}

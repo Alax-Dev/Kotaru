@@ -66,12 +66,12 @@ class ImageServerDelegate(
 				}.setPositiveButton(android.R.string.ok) { _, _ ->
 					if (currentValue != initialValue) {
 						config[key] = currentValue
-						cont.resume(true)
+						cont.resumeWith(Result.success(true))
 					} else {
-						cont.resume(false)
+						cont.resumeWith(Result.success(false))
 					}
 				}.setOnCancelListener {
-					cont.resume(false)
+					cont.resumeWith(Result.success(false))
 				}.create()
 			dialog.show()
 			cont.invokeOnCancellation {

@@ -62,7 +62,7 @@ abstract class BaseReaderAdapter<H : BasePageHolder<*>>(
 
 	suspend fun setItems(items: List<ReaderPage>) = suspendCoroutine { cont ->
 		differ.submitList(items) {
-			cont.resume(Unit)
+			cont.resumeWith(Result.success(Unit))
 		}
 	}
 

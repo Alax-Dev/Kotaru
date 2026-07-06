@@ -19,7 +19,7 @@ suspend fun WorkManager.deleteWork(id: UUID) = suspendCoroutine { cont ->
 	workManagerImpl.workTaskExecutor.executeOnTaskThread {
 		try {
 			workManagerImpl.workDatabase.workSpecDao().delete(id.toString())
-			cont.resume(Unit)
+			cont.resumeWith(Result.success(Unit))
 		} catch (e: Exception) {
 			cont.resumeWithException(e)
 		}
@@ -36,7 +36,7 @@ suspend fun WorkManager.deleteWorks(ids: Collection<UUID>) = suspendCoroutine { 
 					db.workSpecDao().delete(id.toString())
 				}
 			}
-			cont.resume(Unit)
+			cont.resumeWith(Result.success(Unit))
 		} catch (e: Exception) {
 			cont.resumeWithException(e)
 		}
@@ -76,7 +76,7 @@ suspend fun WorkManager.getWorkSpec(id: UUID): WorkSpec? = suspendCoroutine { co
 	workManagerImpl.workTaskExecutor.executeOnTaskThread {
 		try {
 			val spec = workManagerImpl.workDatabase.workSpecDao().getWorkSpec(id.toString())
-			cont.resume(spec)
+			cont.resumeWith(Result.success(spec))
 		} catch (e: Exception) {
 			cont.resumeWithException(e)
 		}

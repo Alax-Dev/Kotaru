@@ -130,7 +130,7 @@ class DataCleanupSettingsViewModel @Inject constructor(
                 val storage = WebStorage.getInstance()
                 suspendCoroutine { cont ->
                     WebStorageCompat.deleteBrowsingData(storage) {
-                        cont.resume(Unit)
+                        cont.resumeWith(Result.success(Unit))
                     }
                 }
                 onActionDone.call(ReversibleAction(R.string.updates_feed_cleared, null))

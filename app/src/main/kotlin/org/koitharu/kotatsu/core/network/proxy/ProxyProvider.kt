@@ -65,7 +65,7 @@ class ProxyProvider @Inject constructor(
 					controller.clearProxyOverride(
 						(cont.context[CoroutineDispatcher] ?: Dispatchers.Main).asExecutor(),
 					) {
-						cont.resume(Unit)
+						cont.resumeWith(Result.success(Unit))
 					}
 				}
 			} else {
@@ -92,7 +92,7 @@ class ProxyProvider @Inject constructor(
 						proxyConfig,
 						(cont.context[CoroutineDispatcher] ?: Dispatchers.Main).asExecutor(),
 					) {
-						cont.resume(Unit)
+						cont.resumeWith(Result.success(Unit))
 					}
 				}
 			}

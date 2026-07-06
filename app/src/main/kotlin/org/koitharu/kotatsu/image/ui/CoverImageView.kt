@@ -234,7 +234,7 @@ class CoverImageView @JvmOverloads constructor(
 
 							if (!isResumed) {
 								isResumed = true
-								continuation.resume(size)
+								continuation.resumeWith(Result.success(size))
 							}
 						}
 						return true

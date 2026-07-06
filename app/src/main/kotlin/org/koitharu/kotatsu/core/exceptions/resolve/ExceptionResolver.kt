@@ -142,7 +142,7 @@ class ExceptionResolver private constructor(
     }
 
     private fun handleActivityResult(tag: String, result: Boolean) {
-        continuations.remove(tag)?.resume(result)
+        continuations.remove(tag)?.resumeWith(Result.success(result))
     }
 
     private fun showSslErrorDialog() {
